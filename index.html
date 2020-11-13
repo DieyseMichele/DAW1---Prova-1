@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+		<title> PROVA 1 </title>
+		<script src="js/jquery.js" defer></script>
+		<script src="js/jquery.mask.js" defer></script>
+		<script src="js/prova.js" defer></script>
+		<link rel = "stylesheet" href = "css/bootstrap.css"/>
+		<link rel = "stylesheet" href = "css/style.css"/> 
+	</head>
+	<body>
+		<div class="container">
+			<form action="" method="" target="" onreset="test()">
+				<fieldset >					
+					<legend class="w-auto">Prova</legend>
+					
+					<div class="col-12 form-group">
+						<label for="usuario" class="control-label">Nome:</label>							
+						<input type="text" class="form-control" id="usuario" name="usuario" required>									
+					</div>
+					
+					<div class=" row col-12">
+						<div class="col-2 form-group">
+							<label for="usuario" class="control-label">Tipo Pessoa:</label><br/>
+							<input type="radio" id="fisica" name="tipo" value="fisica" checked>
+							<label for="fisica">Física</label>	
+							<input type="radio" id="juridica" name="tipo" value="juridica">
+							<label for="juridica">Jurídica</label>	
+						</div>
+						
+						<div class="col-3 form-group">
+							<div id="campoCpf">
+								<label for="usuario" class="control-label" >CPF:</label>	
+								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="___.___.___-__" onblur="validarCPF(this)">
+							</div>
+							<div id="campoCnpj">
+								<label for="usuario" class="control-label">CNPJ:</label>	
+								<input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="__.___.___/____-__" onblur="validarCNPJ(this)">
+							</div>
+						</div>
+						
+						<div class="col-2 form-group">
+							<label for="usuario" class="control-label">CEP:</label>
+							<input type="text" class="form-control" id="cep" name="cep" placeholder="_____-___" required onblur="validarCEP(this)">
+						</div>
+
+						<div class="col-3 form-group">								
+							<label for="usuario" class="control-label">Estado:</label>
+							<select id="estado" name="estado" class="form-control">
+								<option value="mg">MG</option>
+								<option value="sp">SP</option>
+								<option value="rj">RJ</option>
+								<option value="es">ES</option>
+							</select>
+						</div>
+						
+						<div class="col-1 form-group"><br/>
+							<input id="botao-enviar" type="submit" class="btn btn-success" value="Enviar"></input>								
+						</div>	
+						<div class="col-1 form-group"><br/>							
+							<input id="botao-limpar" type="reset" class="btn btn-info" value="Limpar"></input>
+						</div>
+					</div>																		
+				</fieldset>
+			</form>
+		</div>
+	</body>
+	</html>
